@@ -6,11 +6,9 @@ int main(){
     int num;
     cout<<"Enter a positive integer number : ";
     cin>>num;
-    if(num % 2 == 0){
+  if(num % 2 == 0){
         cout<<"Given number is a Even number";
-    } 
-    
-    if(num % 2 != 0) {
+    } else {
         cout<<"Given number is a Odd number";
-    }
+    } 
 }
