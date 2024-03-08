@@ -14,7 +14,7 @@ int main(){
   cout<<"Enter sell price : ";
   cin>>sp;
 
-  if(sp>=cp){
+  if(sp>cp){
      cout<<"Profit ";
   } 
   else{

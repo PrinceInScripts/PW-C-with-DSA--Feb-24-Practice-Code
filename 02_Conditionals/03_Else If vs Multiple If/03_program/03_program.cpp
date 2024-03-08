@@ -14,14 +14,14 @@ int main(){
   cout<<"Enter sell price : ";
   cin>>sp;
 
-  if(cp>sp){
-     cout<<"loss : "<<cp-sp;
-  } 
   if(sp>cp){
-    cout<<"Profit : "<<sp-cp;
-  }
-  if(cp==sp){
-    cout<<"No Loss No Profit";
+     cout<<"Profit ";
+  } 
+  if(cp>sp){
+    cout<<"loss ";
   }
 
+  if(sp==cp){
+    cout<<"No Profit No loss";
+  }
 }
