@@ -7,9 +7,10 @@ int main(){
     int num;
     cout<<"Enter a positive integer number : ";
     cin>>num;
-   if(num < 0){
-     num *= -1;
-    //  num=-n;
-   }
-   cout<<num;
+    if(num > 0){
+        cout<<num;
+    } 
+    else {
+        cout<<-num;
+    }
 }
