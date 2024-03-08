@@ -8,7 +8,14 @@ int main(){
     cin>>num;
     if(num % 2 == 0){
         cout<<"Given number is a Even number";
-    } else {
+    } 
+    
+    if(num % 2 != 0) {
         cout<<"Given number is a Odd number";
     }
+    // if(num % 2 == 0){
+    //     cout<<"Given number is a Even number";
+    // } else {
+    //     cout<<"Given number is a Odd number";
+    // }
 }
