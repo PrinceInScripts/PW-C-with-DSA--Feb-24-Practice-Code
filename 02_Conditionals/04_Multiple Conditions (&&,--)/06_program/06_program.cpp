@@ -12,7 +12,7 @@ int main(){
     //     cout<<"Given character is an alphabets";
     // } else {
     //     cout<<"Given character is not an alphabets";
-    // }
+    // } 
     
      if((int)ch >= 65 && (int)ch <= 90 ){
         cout<<"Given character is uppercase alphabets";
