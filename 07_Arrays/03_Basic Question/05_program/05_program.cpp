@@ -1,9 +1,10 @@
 /*
-Ques : Find the largest element in the given
+Ques : Find the Smallest element in the given
 Array.
 */
 
 #include<iostream>
+#include<climits>
 using namespace std;
 int main(){
     int size,sum=0;
@@ -15,24 +16,15 @@ int main(){
     for(int i=0;i<size;i++){
         cin>>arr[i];
     }
-    int max=arr[0];
+    int min=INT_MAX;
     for(int i=0;i<size;i++){
-        if(arr[i]>max){
-            max=arr[i];
+        if(arr[i]<min){
+            min=arr[i];
         }
     }
 
-    cout<<"Maximum element on array is : "<<max;
+    cout<<"Minimum element on array is : "<<min;
 
    
 }
 
-/*
-#output
-Enter size of array : 5
-4
-5
-4
-2
-4
-*/
