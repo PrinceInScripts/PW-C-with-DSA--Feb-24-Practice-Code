@@ -12,7 +12,7 @@ using namespace std;
 void swap(int* a,int *b){
     int temp=*a;
     *a=*b;
-    *b=*a;
+    *b=temp;
     return;
 }
 
@@ -25,7 +25,7 @@ void sorting(vector<int>& v){
         if(v[j]>0) j--;
 
         if(v[i]>0 && v[j]<0){
-            swap(v[i],v[j]);
+            swap(&v[i],&v[j]);
             i++;
             j--;
         }
