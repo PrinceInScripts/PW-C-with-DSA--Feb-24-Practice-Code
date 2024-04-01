@@ -1,0 +1,14 @@
+if(i==m){
+        while(j<n){
+        v[k]=v2[j];
+        j++;
+        k++;
+        }
+    }
+    if(j==n){
+        while(i<m){
+        v[k]=v1[i];
+        i++;
+        k++;
+        }
+    }
