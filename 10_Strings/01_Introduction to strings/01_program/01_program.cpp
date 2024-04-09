@@ -3,7 +3,8 @@
 using namespace std;
 int main(){
     // char str[5]={'a','b','c','d','e'};
-    char str[]={'a','b','c','d','e','f'};
+    char str[10]={'a','b','c','d','e','f'};
+    cout<<(int)str[6]<<endl;
    
 
     for(int i=0;str[i]!='\0';i++){
