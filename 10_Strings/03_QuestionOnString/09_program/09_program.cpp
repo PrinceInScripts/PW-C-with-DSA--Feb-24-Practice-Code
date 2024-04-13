@@ -22,29 +22,25 @@ int main(){
     while(ss>>temp){
         sstr.push_back(temp);
     }
-    int max=0;
-    for(int i=0;i<sstr.size();i++){
-        int count=1;
-        for(int j=i+1;j<sstr.size();j++){
-            if(sstr[i]==sstr[j]){
-                count++;
-            }
-        }
 
-        if(max<count){
-            max=count;
-        }
+    sort(sstr.begin(),sstr.end());
+    int maxCount=0;
+    int count=1;
+    for(int i=0;i<sstr.size();i++){
+        if(sstr[i]==sstr[i-1]) count++;
+        else count=1;
+
+        maxCount=max(maxCount,count);
     }
+    
+    count=1;
     for(int i=0;i<sstr.size();i++){
-        int count=1;
-        for(int j=i+1;j<sstr.size();j++){
-            if(sstr[i]==sstr[j]){
-                count++;
-            }
-        }
-
-        if(max==count){
+        if(sstr[i]==sstr[i-1]) count++;
+        else count=1;
+         
+         if(count==maxCount){
            cout<<sstr[i]<<" "<<count<<endl;
-        }
+         }
     }
+
 }
