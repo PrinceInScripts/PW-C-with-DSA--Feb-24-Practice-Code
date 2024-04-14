@@ -24,7 +24,7 @@ int main(){
     cout<<endl<<"-------------------------"<<endl;
 
     int b =100;
-    for( ;a>0;){
+    for( ;b>0;){
         cout<<b<<" ";
         b-=3;
     }
