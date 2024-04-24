@@ -8,7 +8,7 @@ using namespace std;
 int main(){
 //    string s="knight";
    int n;
-   cout<<"Enter size f=of string : ";
+   cout<<"Enter size of string : ";
    cin>>n;
 
    char s[n];
