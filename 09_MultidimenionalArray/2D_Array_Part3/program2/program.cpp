@@ -18,4 +18,4 @@ int main(){
     cout<<b[0][0]<<endl;
     change2D(b);
     cout<<b[0][0];
-}
+}    
