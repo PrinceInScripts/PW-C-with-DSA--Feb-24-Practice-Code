@@ -20,4 +20,4 @@ int main(){
     while(ss>>temp){
         cout<<temp<<endl;
     }
-}
+} 
