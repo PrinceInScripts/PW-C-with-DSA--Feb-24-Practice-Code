@@ -20,6 +20,7 @@ int main(){
     }
     */
    //Another Method
+   /*
    vector<int> check(arr.size(),0);
    for(int i=0;i<check.size();i++){
       if(check[arr[i]]==1){
@@ -29,6 +30,13 @@ int main(){
          check[arr[i]]=1;
       }
    }
+   */
    //Another way Using of Math
-    
+   int sum=0;
+   int math_sum=(arr.size()-1)*(arr.size()-1+1)/2;
+   for(int i=0;i<arr.size();i++){
+    sum+=arr[i];
+   }
+
+   cout<<sum-math_sum<<endl;
 }
