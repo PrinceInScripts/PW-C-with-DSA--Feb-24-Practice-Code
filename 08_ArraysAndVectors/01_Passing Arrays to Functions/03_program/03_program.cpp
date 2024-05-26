@@ -19,6 +19,7 @@ int main(){
         cout<<*ptr<<" ";
         ptr++;
     }
+    cout<<ptr<<endl;
     ptr=arr;
     cout<<endl;
     for(int i=0;i<=4;i++){

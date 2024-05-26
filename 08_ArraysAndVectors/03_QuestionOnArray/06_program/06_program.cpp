@@ -3,10 +3,6 @@ Ques : Write a program to reverse the array without
 using any extra array.
 */
 
-/*
-Ques : Write a program to copy the contents of one array into another in the reverse order.
-*/
-
 #include<iostream>
 #include<vector>
 using namespace std;
