@@ -1,4 +1,4 @@
-//Ques : Stair Path 
+//Ques : Stair Path fo 2 jump and 3 jump
 
 #include<iostream>
 using namespace std;
