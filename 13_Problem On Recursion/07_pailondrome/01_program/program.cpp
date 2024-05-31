@@ -1,6 +1,6 @@
 // Palindrome using recursion
 // Find out whether a given string is palindrome or not 
-// using recursion
+// using Iteration
 
 #include<iostream>
 using namespace std;
