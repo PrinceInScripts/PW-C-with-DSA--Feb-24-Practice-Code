@@ -16,10 +16,12 @@ void printSubsets(string str,string ans,int idx,bool flag){
     if(ch==dh){
         if(flag) printSubsets(str,ans+ch,idx+1,true);
         printSubsets(str,ans,idx+1,false);
-    }
-    if(flag) printSubsets(str,ans+ch,idx+1,true);
+    } else {
+      if(flag) printSubsets(str,ans+ch,idx+1,true);
     printSubsets(str,ans,idx+1,true);
     
+    }
+   
 }
 int main(){
     string s;
