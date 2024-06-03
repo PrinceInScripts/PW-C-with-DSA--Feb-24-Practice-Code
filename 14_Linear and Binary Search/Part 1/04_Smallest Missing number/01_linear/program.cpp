@@ -9,16 +9,9 @@ non-negative element in it
 #include<iostream>
 using namespace std;
 int main(){
-    int nums[]={0,1,2,3,4,8,9};
+    int nums[]={1,2,3,4,8,9};
     int n=sizeof(nums)/sizeof(nums[0]);
 
-    for(int i=0;i<n;i++){
-        if(nums[i]+1!=nums[i+1]) {
-            cout<<i+1;
-            break;
-        }
-    }
-    cout<<endl;
     for(int i=0;i<n;i++){
         if(i!=nums[i]) {
             cout<<i;
