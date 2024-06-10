@@ -12,7 +12,7 @@ int main(){
     }
     
     //Sort in Ascending order
-    sort(v.begin(),v.end());
+    sort(v.begin(),v.end());  //O(nlogn)
     for(int i=0;i<v.size();i++){
         cout<<v[i]<<" ";
     }
