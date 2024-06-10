@@ -12,8 +12,8 @@ int main(){
     }
     
     int idx=0;
-    while(idx<n-1){
-        for(int i=0;i<n-1;i++){
+    for(int j=0;j<n-1;j++){
+        for(int i=0;i<n-1-j;i++){
             if(arr[i]>arr[i+1]){
                 int temp=arr[i];
                 arr[i]=arr[i+1];
