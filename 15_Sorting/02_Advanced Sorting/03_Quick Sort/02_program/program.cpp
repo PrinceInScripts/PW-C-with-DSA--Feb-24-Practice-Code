@@ -1,21 +1,21 @@
-//Quick Sort for average case
-// This algorithm on worst case time complexity is O(n^2)
+//Quick Sort 
 
 
 #include<iostream>
 using namespace std;
 int partition(int arr[],int startIdx,int endIdx){
-    int pivotElement=arr[startIdx];
+    int pivotElement=arr[(startIdx+endIdx)/2];
 
     int count=0;
-    for(int i=startIdx+1;i<=endIdx;i++){
+    for(int i=startIdx;i<=endIdx;i++){
+        if(i==((startIdx+endIdx)/2)) continue;
         if(arr[i]<=pivotElement){
             count++;
         }
     }
     
     int pivotIndex=startIdx+count;
-    swap(arr[startIdx],arr[pivotIndex]);
+    swap(arr[(startIdx+endIdx)/2],arr[pivotIndex]);
 
     int i=startIdx;
     int j=endIdx;
