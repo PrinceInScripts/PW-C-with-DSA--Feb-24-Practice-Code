@@ -9,7 +9,7 @@ void merge(vector<int>& a, vector<int>& b, vector<int>& result){
     int k=0;
    
     while(i<a.size() && j<b.size()){
-        if(a[i]<b[j]) result[k++]=a[i++];
+        if(a[i]<=b[j]) result[k++]=a[i++];
         else result[k++]=b[j++]; 
     }
 
