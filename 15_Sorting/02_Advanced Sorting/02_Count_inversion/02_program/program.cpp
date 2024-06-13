@@ -3,7 +3,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-int count=0;
+// int count=0;
 void merge(vector<int>& a, vector<int>& b, vector<int>& result){
     int i=0,j=0,k=0;
    
@@ -32,10 +32,11 @@ int inversion(vector<int> a,vector<int> b){
     }
     return count;
 }
-void mergeSort(vector<int>& v){
+int mergeSort(vector<int>& v){
     int n=v.size();
+    int count=0;
     int n1=n/2,n2=n-n/2;
-    if(n==1) return;
+    if(n==1) return 0;
     vector<int> a(n1),b(n2);
     for(int i=0;i<n1;i++){
         a[i]=v[i];
@@ -44,11 +45,12 @@ void mergeSort(vector<int>& v){
         b[i]=v[i+n1];
     }
 
-    mergeSort(a);
-    mergeSort(b);
+    count+=mergeSort(a);
+    count+=mergeSort(b);
     
     count+=inversion(a,b);
     merge(a,b,v);
+    return count;
 }
 int main(){
     int arr[]={5,1,3,0,4,2,6};
@@ -59,7 +61,7 @@ int main(){
         cout<<el<<" ";
     }
     cout<<endl;
-    mergeSort(v);
-    cout<<count<<endl;
+    
+    cout<<mergeSort(v)<<endl;
 
 }
