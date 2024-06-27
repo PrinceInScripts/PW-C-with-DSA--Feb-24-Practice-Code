@@ -24,19 +24,24 @@ int main(){
         }
     }
     if(idx==-1) ans[0]=1;
-    else ans[0]=ans[idx];
+    else ans[0]=arr[idx];
+
     int i=1;
-    int j=n-k+1;
+    int j=k;
 
     while(j<n){
         if(idx>=i) ans[i]=arr[idx];
         else {
-           for(idx=i;idx<i+k;idx++){
-            if(arr[idx]<0) {
-                ans[i]=arr[idx];
+           idx=-1;
+           for(int x=i;x<=j;x++){
+            if(arr[x]<0) {
+                idx=x;
                 break;
-            };
+            }
            }
+           if(idx!=-1) ans[i]=arr[idx];
+           else ans[i]=1;
+           
         }
         i++;
         j++;
