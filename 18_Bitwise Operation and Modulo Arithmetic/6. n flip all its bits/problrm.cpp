@@ -18,6 +18,19 @@ int flips0to1(int n){
 
      return a^n;
 }
+int flips0to12(int n){
+    int p=n;
+    int a=n;
+    while(n>0){
+        a=n;
+        n=n & (n-1);
+    }
+    a=a<<1;
+    a=a-1; 
+
+    return p^a;
+}
 int main(){
    cout<<flips0to1(24)<<endl;
+   cout<<flips0to12(24)<<endl;
 }
