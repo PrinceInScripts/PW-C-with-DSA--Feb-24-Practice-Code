@@ -10,7 +10,7 @@ int maxPower21(int n){
     }
     return temp;
 }
-int maxPower2(int n){
+int maxPower22(int n){
     int temp;
     while(n>0){
         temp=n;
@@ -18,7 +18,17 @@ int maxPower2(int n){
     }
     return temp;
 }
+int maxPower2(int n){
+     n=n | (n>>1);
+     n=n | (n>>2);
+     n=n | (n>>4);
+     n=n | (n>>8);
+     n=n | (n>>16);
+
+     return (n+1)>>1;
+}
 int main(){
    cout<<maxPower21(24)<<endl;
+   cout<<maxPower22(24)<<endl;
    cout<<maxPower2(24)<<endl;
 }
