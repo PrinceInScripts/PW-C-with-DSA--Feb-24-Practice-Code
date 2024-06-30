@@ -1,3 +1,11 @@
+
+/*
+Practice
+Given an integer n, find the maximum power of two that is 
+smaller than n.
+-
+
+*/
 #include<iostream>
 using namespace std;
 
