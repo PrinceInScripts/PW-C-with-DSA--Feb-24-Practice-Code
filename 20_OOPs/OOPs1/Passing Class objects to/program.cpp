@@ -23,21 +23,33 @@ class Player{
     int getAlive(){
         return alive;
     }
-    int setScore(int score){
-       this.score=score;
+    void setScore(int score){
+       this->score=score;
     }
-    int setHealth(int health){
-        this.health=health;
+    void setHealth(int health){
+        this->health=health;
     }
     
-    int setAge(int age){
-       this.age=age;
+    void setAge(int age){
+       this->age=age;
     }
-    int setAlive(bool alive){
-        this.alive=alive
+    void setAlive(bool alive){
+        this->alive=alive;
     }
     
 };
+
+int add(int a,int b){
+    return a+b;
+}
+int addScore(Player a,Player b){
+    return a.getScore()+b.getScore();
+}
+
+Player getMaxPlayerScore(Player a,Player b){
+    if(a.getScore()>b.getScore()) return a;
+    else return b;
+}
  
 int main(){
     Player harsh; //object creation staticlly
@@ -52,4 +64,10 @@ int main(){
     raghav.setHealth(90);
     raghav.setScore(80);
     raghav.setAlive(true);
+
+    cout<<add(20,32)<<endl;
+    cout<<addScore(harsh,raghav)<<endl;
+
+    Player player3=getMaxPlayerScore(harsh,raghav);
+    cout<<player3.getScore();
 }
