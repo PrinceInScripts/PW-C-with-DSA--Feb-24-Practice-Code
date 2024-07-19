@@ -1,10 +1,11 @@
-    //compile time binding(when we don't declare virtual func then we run only what we called)
+//runtime binding (when we declare virtual function or method on any function on class)
+
 
 #include<iostream> 
 using namespace std;
 class Vehicle{
    public:
-    void show(){
+    virtual void show(){
         cout<<"Vehicle Show"<<endl;
     }
 };
