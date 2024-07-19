@@ -23,4 +23,6 @@ int main(){
      Vehicle *a;
      a=&b;
      a->show();
+     a=new Bike;
+     a->show();
 }
