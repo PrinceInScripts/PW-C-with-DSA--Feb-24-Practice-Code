@@ -32,5 +32,13 @@ int main(){
     b.next=&c;
     c.next=&d;
     // d.next=NULL;
+
+    cout<<b.val<<endl;
+    cout<<(*(a.next)).val<<endl;
+    cout<<(a.next)->val<<endl;
+    cout<<((a.next)->next)->val<<endl;
+    cout<<(a.next)->next->val<<endl;
+    cout<<(a.next)->next->next->val<<endl;
+    cout<<(*(*(*a.next).next).next).val<<endl;
     
 }
