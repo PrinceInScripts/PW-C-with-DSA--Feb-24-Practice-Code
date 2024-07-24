@@ -46,6 +46,15 @@ int size(Node* a){
     }
     return n;
 }
+
+void insertAtEnd(Node* head,int val){
+    Node* newNode=new Node(val);
+    Node* temp=head;
+    while(temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=newNode;
+}
 int main(){
     //10 20 30 40
    
@@ -64,5 +73,8 @@ int main(){
    displayRec(a);
    cout<<endl;
    displayReverse(a);
-     
+   insertAtEnd(a,60);
+   cout<<endl;
+   display(a);
+    
 }
