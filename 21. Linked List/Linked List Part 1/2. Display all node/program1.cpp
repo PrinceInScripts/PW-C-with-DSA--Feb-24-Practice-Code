@@ -32,6 +32,11 @@ void displayRec(Node* head){
     cout<<head->val<<" ";
     displayRec(head->next);
 }
+void displayReverse(Node* head){
+    if(head==NULL) return;
+    displayReverse(head->next);
+    cout<<head->val<<" ";
+}
 int size(Node* a){
     Node* temp=a;
     int n=0;
@@ -57,5 +62,7 @@ int main(){
    display(a);
    cout<<size(a)<<endl;
    displayRec(a);
+   cout<<endl;
+   displayReverse(a);
      
 }
