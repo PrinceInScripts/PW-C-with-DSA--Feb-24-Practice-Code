@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stack>
+#include<vector>
 using namespace std;
 void print(stack<int> st){
     stack<int> temp;
@@ -24,7 +25,15 @@ int main(){
     st.push(40);
     st.push(50);
 
+   
+    stack<int> st1;
+    st1.push(10);
+    st1.push(20);
+    st1.push(30);
+    st1.push(40);
+    st1.push(50);
 
+   //1 way via stack
     stack<int> temp1;
     while(st.size()>0){
         temp1.push(st.top());
@@ -41,6 +50,18 @@ int main(){
         st.push(temp2.top());
         temp2.pop();
     }
+    
+    // 2 way via array
 
+    vector<int> temp;
+    while(st1.size()>0){
+         temp.push_back(st1.top());
+         st1.pop();
+    }
+
+    for(auto el:temp){
+        st1.push(el);
+    }
     print(st);
+    print(st1);
 }
