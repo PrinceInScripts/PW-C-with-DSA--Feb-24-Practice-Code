@@ -31,6 +31,10 @@ int mxInTree(Node* root){
     if(root==NULL) return INT_MIN;
     return max(root->val,max(mxInTree(root->left),mxInTree(root->right)));
 }
+int levelsOfTree(Node* root){
+    if(root==NULL) return 0;
+    return 1+max(levelsOfTree(root->left),levelsOfTree(root->right));
+}
 int main(){
      Node* a=new Node(1);
      Node* b=new Node(2);
@@ -53,4 +57,6 @@ int main(){
     cout<<size(a);
      cout<<endl;
     cout<<mxInTree(a);
+     cout<<endl;
+    cout<<levelsOfTree(a);
 }
