@@ -1,5 +1,6 @@
 
 #include<iostream>
+#include<climits>
 using namespace std;
 class Node{
 public:
@@ -26,6 +27,10 @@ int size(Node* root){
     if(root==NULL) return 0;
     return 1+size(root->left)+size(root->right);
 }
+int mxInTree(Node* root){
+    if(root==NULL) return INT_MIN;
+    return max(root->val,max(mxInTree(root->left),mxInTree(root->right)));
+}
 int main(){
      Node* a=new Node(1);
      Node* b=new Node(2);
@@ -46,4 +51,6 @@ int main(){
     cout<<sum(a);
      cout<<endl;
     cout<<size(a);
+     cout<<endl;
+    cout<<mxInTree(a);
 }
