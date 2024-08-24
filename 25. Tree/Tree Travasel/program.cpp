@@ -31,10 +31,25 @@ void postorder(TreeNode* root){
 }
 void nthLevel(TreeNode* root,int curr,int level){
     if(root==NULL) return;
-    if(curr==level) cout<<root->val<<" ";
+    if(curr==level) {
+        cout<<root->val<<" ";
+        return;
+    }
     nthLevel(root->left,curr+1,level);
     nthLevel(root->right,curr+1,level);
     
+}
+int levelOfTree(TreeNode* root){
+    if(root==NULL) return 0;
+    return 1+(max(levelOfTree(root->left),levelOfTree(root->right)));
+}
+
+void levelOrder(TreeNode* root){
+       int n=levelOfTree(root);
+       for(int i=1;i<=n;i++){
+        nthLevel(root,1,i);
+       }
+
 }
 
 int main(){
@@ -58,5 +73,10 @@ int main(){
       cout<<endl;
       postorder(a);
       cout<<endl;
+      nthLevel(a,1,1);
       nthLevel(a,1,2);
+      nthLevel(a,1,3);
+      cout<<endl;
+      cout<<levelOfTree(a)<<endl;
+      levelOrder(a);
 }
