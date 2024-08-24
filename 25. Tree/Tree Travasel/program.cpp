@@ -29,6 +29,13 @@ void postorder(TreeNode* root){
     postorder(root->right);
     cout<<root->val<<" ";
 }
+void nthLevel(TreeNode* root,int curr,int level){
+    if(root==NULL) return;
+    if(curr==level) cout<<root->val<<" ";
+    nthLevel(root->left,curr+1,level);
+    nthLevel(root->right,curr+1,level);
+    
+}
 
 int main(){
        TreeNode* a=new TreeNode(1);
@@ -50,4 +57,6 @@ int main(){
       inorder(a);
       cout<<endl;
       postorder(a);
+      cout<<endl;
+      nthLevel(a,1,2);
 }
