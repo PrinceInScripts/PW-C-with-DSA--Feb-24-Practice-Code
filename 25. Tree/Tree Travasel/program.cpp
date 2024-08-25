@@ -1,5 +1,7 @@
 #include<iostream>
+#include<queue>
 using namespace std;
+
 class TreeNode{
 public:
     int val;
@@ -69,6 +71,29 @@ void levelOrderRev(TreeNode* root){
 
 }
 
+void levelOrderQueue(TreeNode* root){
+    queue<TreeNode*> q;
+    q.push(root);
+    while(q.size()>0){
+        TreeNode* temp=q.front();
+        q.pop();
+        cout<<temp->val<<" ";
+        if(temp->left!=NULL) q.push(temp->left);
+        if(temp->right!=NULL) q.push(temp->right);
+    }
+}
+void levelOrderQueueRev(TreeNode* root){
+    queue<TreeNode*> q;
+    q.push(root);
+    while(q.size()>0){
+        TreeNode* temp=q.front();
+        q.pop();
+        cout<<temp->val<<" ";
+        if(temp->right!=NULL) q.push(temp->right);
+        if(temp->left!=NULL) q.push(temp->left);
+    }
+}
+
 int main(){
        TreeNode* a=new TreeNode(1);
        TreeNode* b=new TreeNode(2);
@@ -98,4 +123,8 @@ int main(){
       levelOrder(a);
       cout<<endl;
       levelOrderRev(a);
+      cout<<endl;
+      levelOrderQueue(a);
+      cout<<endl;
+      levelOrderQueueRev(a);
 }
