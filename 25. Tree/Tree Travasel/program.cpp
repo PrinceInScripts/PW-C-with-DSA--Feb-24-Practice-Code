@@ -39,6 +39,16 @@ void nthLevel(TreeNode* root,int curr,int level){
     nthLevel(root->right,curr+1,level);
     
 }
+void nthLevelRev(TreeNode* root,int curr,int level){
+    if(root==NULL) return;
+    if(curr==level) {
+        cout<<root->val<<" ";
+        return;
+    }
+    nthLevelRev(root->right,curr+1,level);
+    nthLevelRev(root->left,curr+1,level);
+    
+}
 int levelOfTree(TreeNode* root){
     if(root==NULL) return 0;
     return 1+(max(levelOfTree(root->left),levelOfTree(root->right)));
@@ -48,6 +58,13 @@ void levelOrder(TreeNode* root){
        int n=levelOfTree(root);
        for(int i=1;i<=n;i++){
         nthLevel(root,1,i);
+       }
+
+}
+void levelOrderRev(TreeNode* root){
+       int n=levelOfTree(root);
+       for(int i=1;i<=n;i++){
+        nthLevelRev(root,1,i);
        }
 
 }
@@ -79,4 +96,6 @@ int main(){
       cout<<endl;
       cout<<levelOfTree(a)<<endl;
       levelOrder(a);
+      cout<<endl;
+      levelOrderRev(a);
 }
