@@ -18,6 +18,6 @@ int main(){
     minPq.push(30);
     minPq.push(40);
     minPq.push(50);
-    cout<<minPq.top();
+    cout<<minPq.top(); 
 
 }
